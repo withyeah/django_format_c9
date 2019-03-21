@@ -22,7 +22,4 @@ def create(request):
         
 def detail(request, board_pk):
     board = Board.objects.get(pk=board_pk)
-    context = {
-        'board':board
-    }
-    return render(request, 'boards/detail.html', context)
+    context = {'board':b

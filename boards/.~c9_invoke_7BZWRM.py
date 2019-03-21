@@ -18,11 +18,8 @@ def create(request):
         board.save()
         return redirect('boards:index')
     else:
-        return render(request, 'boards/create.html')
+        return render(request, '')
         
 def detail(request, board_pk):
     board = Board.objects.get(pk=board_pk)
-    context = {
-        'board':board
-    }
-    return render(request, 'boards/detail.html', context)
+    context = {'board':b

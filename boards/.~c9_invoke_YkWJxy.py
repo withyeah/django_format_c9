@@ -15,14 +15,11 @@ def create(request):
         title = request.POST.get('title')
         content = request.POST.get('content')
         board = Board(title=title, content=content)
-        board.save()
+        b
         return redirect('boards:index')
     else:
         return render(request, 'boards/create.html')
         
 def detail(request, board_pk):
     board = Board.objects.get(pk=board_pk)
-    context = {
-        'board':board
-    }
-    return render(request, 'boards/detail.html', context)
+    context = {'board':b

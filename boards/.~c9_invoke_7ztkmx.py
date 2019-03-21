@@ -11,7 +11,7 @@ def index(request):
     return render(request, 'boards/index.html', context)
     
 def create(request):
-    if request.method == 'POST':
+    if request.method == 'PO'
         title = request.POST.get('title')
         content = request.POST.get('content')
         board = Board(title=title, content=content)
@@ -22,7 +22,4 @@ def create(request):
         
 def detail(request, board_pk):
     board = Board.objects.get(pk=board_pk)
-    context = {
-        'board':board
-    }
-    return render(request, 'boards/detail.html', context)
+    context = {'board':b

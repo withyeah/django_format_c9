@@ -13,7 +13,7 @@ def index(request):
 def create(request):
     if request.method == 'POST':
         title = request.POST.get('title')
-        content = request.POST.get('content')
+        conte
         board = Board(title=title, content=content)
         board.save()
         return redirect('boards:index')
@@ -22,7 +22,4 @@ def create(request):
         
 def detail(request, board_pk):
     board = Board.objects.get(pk=board_pk)
-    context = {
-        'board':board
-    }
-    return render(request, 'boards/detail.html', context)
+    context = {'board':b
